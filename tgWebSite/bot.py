@@ -38,11 +38,18 @@ def getMessage():
     if request.headers.get('content-type') == 'application/json':
         json_string = request.get_data().decode('utf-8')
         update = telebot.types.Update.de_json(json_string)
+        
+        # --- ДОБАВИМ ЭТОТ БЛОК ДЛЯ ПРЯМОЙ ПРОВЕРКИ ---
+        # Если в апдейте есть сообщение и это текст '/start'
+        if update.message and update.message.text == '/start':
+            start_message(update.message) # Вручную вызываем твою функцию с кнопками
+            return "!", 200
+        # ---------------------------------------------
+
         bot.process_new_updates([update])
         return "!", 200
     else:
         return "Invalid content type", 403
-
 # Главная страница (для проверки в браузере и автоматической привязки)
 @app.route('/')
 def webhook():
