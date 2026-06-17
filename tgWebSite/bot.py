@@ -14,9 +14,9 @@ app = Flask(__name__)
 def start_message(message):
     markup = types.InlineKeyboardMarkup()
     
-    app_furniture = types.WebAppInfo("https://твой-альфурат.netlify.app")
-    app_weather = types.WebAppInfo("https://твоя-погода-react.netlify.app")
-    app_landing = types.WebAppInfo("https://твой-маджента-ленд.netlify.app")
+    app_furniture = types.WebAppInfo("https://alfurat.netlify.app")
+    app_weather = types.WebAppInfo("https://weatherapi4375.netlify.app")
+    app_landing = types.WebAppInfo("https://itboost.netlify.app")
     
     btn_furniture = types.InlineKeyboardButton(text="🪑 Мебельный Fullstack (Alfurat)", web_app=app_furniture)
     btn_weather = types.InlineKeyboardButton(text="🌤 Приложение Погоды (React SPA)", web_app=app_weather)
