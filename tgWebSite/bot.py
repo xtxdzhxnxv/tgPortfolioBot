@@ -3,7 +3,7 @@ import telebot
 from telebot import types
 from flask import Flask, request
 
-TOKEN = '8879633069:AAG36ovFiIygP6HDkPCDIZGqWnOq64Jb-WA'
+TOKEN = os.environ.get('BOT_TOKEN')
 # Вставь сюда URL, который тебе выдаст Render после создания сервиса (например, https://my-bot.onrender.com)
 RENDER_URL = 'https://твой-сабдомен.onrender.com' 
 
