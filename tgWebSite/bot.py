@@ -5,7 +5,7 @@ from flask import Flask, request
 
 TOKEN = os.environ.get('BOT_TOKEN')
 # Вставь сюда URL, который тебе выдаст Render после создания сервиса (например, https://my-bot.onrender.com)
-RENDER_URL = 'https://твой-сабдомен.onrender.com' 
+RENDER_URL = 'https://tgportfoliobot.onrender.com' 
 
 bot = telebot.TeleBot(TOKEN)
 app = Flask(__name__)
